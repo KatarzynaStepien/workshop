@@ -62,8 +62,14 @@ $(document).ready(function() {
     $('.main_slider').slick({
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 3
+        slidesToScroll: 1
     });
+    //$('.main_slider').slick({
+    //    slidesToShow: 1,
+    //    slidesToScroll: 1,
+    //    autoplay: true,
+    //    autoplaySpeed: 2000,
+    //});
 
 });
 

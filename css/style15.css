@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'ralewaybold';
+    src: url("../fonts/raleway-bold-webfont.eot");
+    src: url("../fonts/raleway-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-bold-webfont.woff2") format("woff2"), url("../fonts/raleway-bold-webfont.woff") format("woff"), url("../fonts/raleway-bold-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal; }
+@font-face {
+    font-family: 'ralewayextralight';
+    src: url("../fonts/raleway-extralight-webfont.eot");
+    src: url("../fonts/raleway-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-extralight-webfont.woff2") format("woff2"), url("../fonts/raleway-extralight-webfont.woff") format("woff"), url("../fonts/raleway-extralight-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal; }
+@font-face {
+    font-family: 'ralewayregular';
+    src: url("../fonts/raleway-regular-webfont.eot");
+    src: url("../fonts/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-regular-webfont.woff2") format("woff2"), url("../fonts/raleway-regular-webfont.woff") format("woff"), url("../fonts/raleway-regular-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal; }
+
+* {
+    box-sizing: border-box;
+}
+
 .main {
     width: 100%;
     height: 50px;
@@ -10,36 +33,38 @@
     /*border:1px solid red;*/
     position: relative;
 }
-
+.green_underline {
+    border-bottom: 4px solid #26c7a9;
+    width: 120px;
+}
 .clear {
     clear: both;
 }
-
+/* menu */
 .nav_left {
     width: 200px;
-    margin-left: 20px;
     float: left;
 }
 
 .nav_left a {
     color: white;
     text-transform: uppercase;
+    font-weight: bold;
     padding-top: 18px;
-    padding-left: 5px;
-    margin-left: 35px;
+    /*padding-left: 5px;*/
+    /*margin-left: 35px;*/
 
 }
-
 nav li {
     display: inline-block;
     text-transform: uppercase;
     margin: 0 auto;
 }
-
 nav a {
     float: right;
     color: white;
     text-transform: uppercase;
+    font-weight: bold;
     text-decoration: none;
     padding: 15px;
 }
@@ -49,6 +74,24 @@ nav ul {
     padding: 5px 5px;
 }
 
+/*ul li ul.dropdown{*/
+    /*min-width: 125px; /!* ustawienia dropdowna menu *!/*/
+    /*background:black;           /!*#000000;*!/*/
+    /*display: none;*/
+    /*position: absolute;*/
+    /*z-index: 999;*/
+    /*color: whitesmoke;*/
+    /*/!*right: 0px;*/
+    /*margin:auto;*!/*/
+/*}*/
+
+/*ul li:hover ul.dropdown {*/
+    /*display: block; /!*funkcja rozwijania menu dropdown*/
+    /*}*/
+
+/*menu ends */
+
+/*slider*/
 .slider {
     width: 100%;
     height: 450px;
@@ -64,12 +107,10 @@ nav ul {
 
 
 .slider_foto img{
-
     display:inline-block;
     vertical-align: top;
     margin-top: 100px;
     margin-left: 42px;
-
 }
 
 .slider_text {
@@ -94,93 +135,43 @@ nav ul {
     margin-top: 20px;
 }
 
-/*.arrow {*/
-    /*position:absolute;*/
-    /*font-size: 85px;*/
-    /*color: #26c7a9;*/
-    /*top: 44%;*/
-/*}*/
-
-/*.slick-arrow {*/
-    /*position:absolute;*/
-    /*font-size: 0;*/
-    /*color: transparent;*/
-    /*top: 44%;*/
-    /*z-index:9999;*/
-    /*line-height: 0;*/
-    /*display: block;*/
-    /*width: 20px;*/
-    /*height: 20px;*/
-    /*padding: 0;*/
-    /*cursor: pointer;*/
-    /*border: none;*/
-    /*outline: none;*/
-    /*background: transparent;*/
-/*}*/
-
 .slick-next:before {
     /*right: 0px;*/
-    font-size40px;
-    border:1px solid red;
+    font-size:40px;
+    /*border:1px solid red;*/
     content: "<";
-    color: red;
-}
-
-
-.slick-prev:before {
-    /*left: 0px;*/
-    font-size:20px;
-    border:1px solid red;
-    content: ">";
-    color: red;
-}
-
-.button {
-    width: 200px;
-    height: 40px;
-    border-radius: 5px;
-    background: #26c7a9;
-    margin-left: 54px;
-    margin-top: 32px;
-}
-
-.button p {
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 10px;
-    color: white;
-}
-
-
-#buttonAdd1 {
-    width: 130px;
-    height: 40px;
-    border-radius: 5px;
-    background: white;
-    margin-left: -10px;
-    margin-top: 36px;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 10px;
     color: #26c7a9;
 }
 
-#buttonAdd2 {
-    width: 130px;
-    height: 40px;
-    border-radius: 5px;
-    background: #26c7a9;
-    margin-left: -10px;
-
-    text-align: center;
+.slick-prev:before {
+    /*left: 0px;*/
+    font-size:40px;
+    /*border:1px solid red;*/
+    content: ">";
+    color: #26c7a9;
+}
+/*slider ends */
+/*slider content */
+.button_slider {
+    height: 45px;
+    width: 230px;
+    background-color: #26c7a9;
+    border-radius: 10px;
     text-transform: uppercase;
+    text-align: center;
+    padding-top: 13px;
+    margin: 40px auto 0;
+    font-size: 20px;
+}
+.button_slider a{
+    text-decoration: none;
     color: white;
 }
 
-* {
-    box-sizing: border-box;
-}
+/*slider content ends */
 
+
+/*section pictures*/
 .pictures {
     width: 100%;
     height: 200px;
@@ -225,7 +216,6 @@ nav ul {
 }
 
 
-
 .text_box h1 {
     font-size: 16px;
     font-weight: bold;
@@ -237,30 +227,28 @@ nav ul {
     margin-top: 10px;
     margin-left: 17px;
 }
+/*section pictures ends*/
 
-
-
+/*section boxes*/
 .boxex {
     width: 100%;
     margin-top: 90px;
     background: #F0EBEB;
-
 }
 .boxex .green_underline {
     border-bottom: 4px solid #26c7a9;
     width: 120px;
 }
-
 .cennik h1 {
     text-transform: uppercase;
     margin-top: 20px;
     margin-left: 50px;
+    padding-top: 2em;
     font-weight: bold;
 }
-
 .container1 {
     width: 29%;
-    height: 400px;
+    height: 485px;
     display: inline-block;
     border: 1px solid grey;
     background-color: white;
@@ -269,7 +257,26 @@ nav ul {
     position: relative;
     float: left;
 }
-
+.price {
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    margin: 45px auto 0;
+    padding-top: 17px;
+    font-family: "ralewaybold", sans-serif;
+    background-color: white;
+    border: 1px solid #c3c3c3;
+    color: #c3c3c3;
+    line-height: 64%;
+    font-size: 13px;
+}
+.price span {
+    font-size: 35px;
+    color: #c3c3c3;
+    line-height: 140%;
+    font-family: "ralewaybold", sans-serif;
+}
 .circle1 {
     width: 40px;
     height: 40px;
@@ -326,12 +333,11 @@ nav ul {
     text-transform: uppercase;
 }
 
-
 .container2 {
     width: 29%;
-    height: 400px;
+    height: 485px;
     display: inline-block;
-    border: 1px solid orange;
+    /*border: 1px solid orange;*/
     background: #26c7a9;
     margin-top: 50px;
     margin-left: 25px;
@@ -354,7 +360,26 @@ nav ul {
     margin-top: 20px;
     text-transform: uppercase;
 }
+table {
+    width: 99%;
+    text-align: center;
+    margin-left: 6em;
+    background: white;
+}
 
+tr td {
+    padding: 10px;
+    color: #a6a6a6;
+    font-size: 20px;
+}
+
+tr:nth-of-type(odd) td {
+    background-color: #e4e4e4;
+}
+
+tr:nth-of-type(even) td {
+    background-color: #f9f9f9;
+}
 .container2 h1 {
     text-transform: uppercase;
     margin-top: 20px;
@@ -365,7 +390,7 @@ nav ul {
 }
 .container3 {
     width: 29%;
-    height: 400px;
+    height: 485px;
     display: inline-block;
     border: 1px solid grey;
     margin-top: 50px;
@@ -399,6 +424,43 @@ nav ul {
     text-transform: uppercase;
 }
 
+#buttonAdd {
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    background: #26c7a9;
+    margin-left: 84px;
+    margin-top: 107px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+    color: white;
+}
+
+#buttonAdd1 {
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    background: white;
+    margin-left: 85px;
+    margin-top: 70px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+    color: #26c7a9;
+}
+
+#buttonAdd2 {
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    background: #26c7a9;
+    margin-left: 85px;
+    margin-top: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
 .offer {
     width: 296px;
     /*border: 1px solid orange;*/
@@ -406,27 +468,14 @@ nav ul {
     margin-left: -94px;
 
 }
-#buttonAdd {
-    width: 130px;
-    height: 40px;
-    border-radius: 5px;
-    background: #26c7a9;
-    margin-left: -10px;
-    margin-top: 69px;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 10px;
-    color: white;
-}
+
+
 
 .form {
     width: 100%;
     background: white;
 }
-.form .green_underline {
-    border-bottom: 4px solid #26c7a9;
-    width: 120px;
-}
+
 .kontakt h1 {
     text-transform: uppercase;
     margin-top: 20px;
@@ -481,6 +530,8 @@ textarea {
     text-transform: uppercase;
     color: white;
 }
+
+
 
 /*.last {*/
     /*width: 100%;*/
